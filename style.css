@@ -1,0 +1,130 @@
+body{
+  background: #bff2d5;
+  position: absolute;
+}
+#classic{
+  height: 32em;
+  width: 77em;
+  box-shadow:
+  inset 0 -3em 3em rgba(0,0,0,0.1),
+  0 0  0 2px rgb(255,255,255),
+  0.3em 0.3em 1em 
+  rgba(0,0,0,0.3);
+  background: #fff;
+  margin-top: 55px;
+  margin-left:55px;
+  text-align: center;
+  position: relative;
+}
+.container-upper-text{
+  padding: 30px;
+  margin-top: 1rem;
+
+}
+.container-upper-text header{
+  font-family: sans-serif;
+  font-size: 30px;
+  margin-top: 0em;
+  font-weight: bold;
+  color: #0d2336;
+}
+.container-upper-text p{
+  font-family: verdena;
+  font-size: 15px;
+  color: #0d2336;
+
+}
+#classic section:not(:first-of-type) {
+  display: none;
+}
+#classic label{
+  padding-right: 180px;
+  padding-bottom: 200px;
+  font-family: Georgia, serif;
+  margin-bottom: 10px;
+}
+
+#classic select{
+  padding: 10px 5px 10px 5px;
+  border:none;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 25%;
+  font-family: montserrat;
+  color: #2C3E50;
+  font-size: 20px;
+  background-color: lightgrey;
+
+}
+#message{
+  padding: 10px 10px 100px 10px;
+  border:none;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 25%;
+  font-family: montserrat;
+  color: #2C3E50;
+  font-size: 20px;
+  background-color: lightgrey;
+
+}
+#classic .action-button {
+  width: 15em;
+  font-weight: bold;
+  border: 1px solid #0d2336;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+  overflow: hidden;
+}
+#classic .action-button:hover, #classic .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #0d2336;
+  border-radius: 20px;
+}
+#progressbar {
+  margin-bottom: 0px;
+  overflow: hidden;
+  counter-reset: step;
+}
+#progressbar li {
+  list-style-type: none;
+  display: inline-block;
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  width: 0px;
+  float: center;
+  margin-left: 3em;
+  margin-right: 3em;
+  position: relative;
+}
+#progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 20px;
+  line-height: 20px;
+  display: block;
+  font-size: 10px;
+  color: #333;
+  background: lightgrey;
+  border-radius: 100px;
+  margin: 0 auto 5px auto;
+}
+#progressbar li:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #0d2336;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1;
+}
+#progressbar li:first-child:after {
+  content: none; 
+}
+#progressbar li.active:before,  #progressbar li.active:after{
+  background: #0d2336;
+  color: lightgrey;
+}
