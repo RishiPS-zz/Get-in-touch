@@ -3,8 +3,8 @@ body{
   position: absolute;
 }
 #classic{
-  height: 32%;
-  width: 70%;
+  height: 32em;
+  width: 77em;
   box-shadow:
   inset 0 -3em 3em rgba(0,0,0,0.1),
   0 0  0 2px rgb(255,255,255),
@@ -16,32 +16,29 @@ body{
   text-align: center;
   position: relative;
 }
-.container-upper-text{
+#show-table{
   padding: 30px;
   margin-top: 1rem;
 
 }
-.container-upper-text header{
+#show-table header{
   font-family: sans-serif;
   font-size: 30px;
   margin-top: 0em;
   font-weight: bold;
   color: #0d2336;
 }
-.container-upper-text p{
+#show-table p{
   font-family: verdena;
   font-size: 15px;
   color: #0d2336;
 
 }
-#classic section:not(:first-of-type) {
-  display: none;
-}
-#classic label{
-  padding-right: 180px;
-  padding-bottom: 200px;
-  font-family: Georgia, serif;
-  margin-bottom: 10px;
+#show-table label{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-right: 230px;
+  padding-bottom: 20px;
+
 }
 
 #classic select{
@@ -49,7 +46,7 @@ body{
   border:none;
   border-radius: 3px;
   margin-bottom: 10px;
-  width: 25%;
+  width: 30%;
   font-family: montserrat;
   color: #2C3E50;
   font-size: 20px;
@@ -61,7 +58,7 @@ body{
   border:none;
   border-radius: 3px;
   margin-bottom: 10px;
-  width: 25%;
+  width: 30%;
   font-family: montserrat;
   color: #2C3E50;
   font-size: 20px;
@@ -78,6 +75,9 @@ body{
   margin: 10px 5px;
   overflow: hidden;
 }
+#classic section:not(:first-of-type) {
+  display: none;
+}
 #classic .action-button:hover, #classic .action-button:focus {
   box-shadow: 0 0 0 2px white, 0 0 0 3px #0d2336;
   border-radius: 20px;
@@ -86,18 +86,19 @@ body{
   margin-bottom: 0px;
   overflow: hidden;
   counter-reset: step;
+  float: center;
 }
 #progressbar li {
-  list-style-type: none;
+  list-style-type: circle;
   display: inline-block;
-  color: white;
+  color:aquamarine;
   text-transform: uppercase;
   font-size: 20px;
-  width: 0px;
-  float: center;
-  margin-left: 3em;
-  margin-right: 3em;
+  width: 5%;
   position: relative;
+  margin-right: 5%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 #progressbar li:before {
   content: counter(step);
@@ -107,7 +108,7 @@ body{
   display: block;
   font-size: 10px;
   color: #333;
-  background: lightgrey;
+  background-color: lightgrey;
   border-radius: 100px;
   margin: 0 auto 5px auto;
 }
@@ -118,7 +119,7 @@ body{
   background: #0d2336;
   position: absolute;
   left: -50%;
-  top: 9px;
+  top: 20px;
   z-index: -1;
 }
 #progressbar li:first-child:after {
@@ -127,4 +128,56 @@ body{
 #progressbar li.active:before,  #progressbar li.active:after{
   background: #0d2336;
   color: lightgrey;
+}
+#button_show_hide{
+  padding: 0%;
+  background-color: aquamarine;
+  font-size: 1.5rem;
+  border-radius: 25px;
+  border-style: outset 2px red;
+}
+.name-container p{
+  display: inline-block;
+  width: 15.5%;
+}
+#next-table .name-container label{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-right: 70px;
+}
+.name-container input[type=text]{
+  padding-right: 30px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: lightgrey;
+  border-radius: 3px;
+  border:none;
+  width: 90%;
+}
+#next-table label{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-right: 270px;
+  padding-bottom: 20px;
+}
+#next-table input[type=email]{
+  padding: 10px 5px 10px 5px;
+  border:none;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 30%;
+  font-family: montserrat;
+  color: #2C3E50;
+  font-size: 20px;
+  background-color: lightgrey;
+}
+#next-table input[type=telephone]{
+  padding: 10px 5px 10px 5px;
+  border:none;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 30%;
+  font-family: montserrat;
+  color: #2C3E50;
+  font-size: 20px;
+  background-color: lightgrey;
 }
