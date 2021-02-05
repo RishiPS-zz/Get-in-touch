@@ -3,10 +3,14 @@
   <title>Get in touch</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" href="action.js"></script>
+
 </head>
 <body>
-  <form id="classic">
-    
+  <div>
+  <button onclick="openForm()" style="width:auto;">Get in touch</button>
+  </div>
+  <form id="classic" class="classic_touch">  
     <section id="show-table">
       <header>Get in touch</header>
     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
@@ -27,7 +31,7 @@
   <label for="text">Your message</label><br>
   <input type="text" name="message" id="message" placeholder="Start typing...">
   <br>
-<button type="button" onclick="click_to_next()" class="next action-button">Confirm Message</button>
+<button type="button" class="next action-button">Confirm Message</button>
 </div>
 </section>
 <section id="next-table">
@@ -60,6 +64,16 @@
       
     </div>
   </section>
+  <button type="button" onclick="closeForm()"class="cancelbtn">Cancel</button>
+<script>
+  function openForm() {
+  document.getElementById("classic").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("classic").style.display = "none";
+}
+</script>
 </form>
 </body>
 </html>
