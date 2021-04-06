@@ -7,19 +7,12 @@
 
 </head>
 <body>
-  <div>
-  <button onclick="openForm()" style="width:auto;">Get in touch</button>
-  </div>
-  <form id="classic" class="classic_touch">  
-    <section id="show-table">
-      <header>Get in touch</header>
+  <button id="btn-popup" onclick="openForm()">Get in touch</button>
+<div id="classic" class="classic_touch">  
+    <section id="form1">
+      <h3>Get in touch</h3>
     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-    <ul id="progressbar">
-      <li class="active"></li>
-      <li class=""></li>
-      <li></li>
-    </ul>
-  <div class="container">
+      <div class="container">
       <label for="enqiry type">Enquiry type</label><br>
   <select  name="enquiry" id="enquiry">
     <option value="General enquiry">General enquiry</option>
@@ -27,15 +20,15 @@
     <option value="android software">Mobile App</option>
     <option value="Web application">Web application</option>
   </select>
-  <br>
+      <br>
   <label for="text">Your message</label><br>
   <input type="text" name="message" id="message" placeholder="Start typing...">
-  <br>
-<button type="button" class="next action-button">Confirm Message</button>
-</div>
+      <br>
+          <button type="button" class="next action-button" onclick="return validate()">Confirm Message</button>
+      </div>
 </section>
-<section id="next-table">
-  <header>Get in touch</header>
+<section id="form2">
+  <h3>Get in touch</h3>
     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
   <div class="container">
     <div class="name-container">
@@ -46,7 +39,7 @@
         <label for="text">Last Name:</label><br>
         <input type="text" name="lname" id="lname">
       </p>
-      </div>
+    </div>
         <label for="email">Email:</label><br>
         <input type="email" name="email" id="email" placeholder="e.g name@domain.com"><br>
         <label for=phone>Telephone</label><br>
@@ -54,17 +47,17 @@
         <br> 
         <button type="button" name="next" class="next action-button" value="Next">Send Message</button>
 
-      </div>
-    </div>
-  </section>
-  <section>
-    <header>Get in touch</header>
+  </div>
+ </section>
+  <section id="form3">
+    <h3>Get in touch</h3>
     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
     <div>
       
     </div>
   </section>
-  <button type="button" onclick="closeForm()"class="cancelbtn">Cancel</button>
+  <button type="button" id="btn-close" onclick="closeForm()"class="cancelbtn">Cancel</button>
+</div>
 <script>
   function openForm() {
   document.getElementById("classic").style.display = "block";
@@ -73,7 +66,16 @@
 function closeForm() {
   document.getElementById("classic").style.display = "none";
 }
+ function validate(){
+   let enquiry = document.getElementById('enquiry').value;
+
+   if(enquiry == ""){
+     document.getElementById('enquiry').innerHTML = "** Please fill the username field";
+     return false;
+   }
+ }
+
+
 </script>
-</form>
 </body>
 </html>
